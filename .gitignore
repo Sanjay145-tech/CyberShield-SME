@@ -1,0 +1,5 @@
+__pycache__/
+.venv/
+data/processed/
+results/answers_*.jsonl
+results/judged_*.jsonl

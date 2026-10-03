@@ -1,0 +1,8 @@
+rank_bm25==0.2.2
+sentence-transformers>=2.7
+numpy
+pypdf>=4.0
+beautifulsoup4
+requests
+matplotlib
+streamlit>=1.36
