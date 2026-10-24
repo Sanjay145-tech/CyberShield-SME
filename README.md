@@ -62,3 +62,13 @@ Outputs land in `results/`: `summary.md`, `summary.csv`, `summary.png` (video ch
 ## Variants compared
 
 `llm_only` (plain AI), `bm25`, `dense`, `hybrid`, `bm25_scenario`, `hybrid_scenario` (full system).
+
+## Extra checks (added after the main evaluation)
+
+These only read the saved files in `results/`, so they don't need Ollama.
+
+- `python eval/number_guard.py` checks every phone number in an answer against the ACSC documents. It flags 5 answers, all with 1300 22 58 72 (4 plain chatbot, 1 bm25_scenario).
+- `python eval/refusal_audit.py` sorts answers into clean refusal, answer plus refusal sentence, reworded refusal, and normal answer. The unanswered metric only looks for the exact sentence, so it misses the last two kinds.
+- `python tests/test_basics.py` runs small checks on the incident classifier and citation parser.
+
+Known limits: the classifier keywords were written while looking at the test questions, and the number check only covers phone numbers.
