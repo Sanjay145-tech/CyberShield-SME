@@ -1,0 +1,6 @@
+llm_only,RW1,answer plus refusal sentence
+llm_only,BEC3,answer plus refusal sentence
+llm_only,OOS2,answer plus refusal sentence
+llm_only,OOS3,answer plus refusal sentence
+llm_only,OOS4,answer plus refusal sentence
+dense,OOS2,reworded refusal (metric misses it)
