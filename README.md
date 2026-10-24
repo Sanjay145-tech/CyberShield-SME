@@ -55,6 +55,8 @@ Outputs land in `results/`: `summary.md`, `summary.csv`, `summary.png` (video ch
 - **Validate the judge.** Two people fill `results/human_rating_sheet.csv` independently
   (variant names are hidden), then run `python eval/agreement.py`. If kappa < 0.4 on a
   metric, report the human scores for it, not the judge's.
+  `human_rating_anitha.csv` and `human_rating_karthik.csv` are the two blinded human rating
+  sheets, rated by Anitha and Karthik. `human_rating_sheet.csv` is the original blank template.
 - **Caveat on the classifier.** Its keywords were checked against this test set, so its
   accuracy here is optimistic. Write a few new questions it hasn't seen before reporting
   classifier accuracy.
